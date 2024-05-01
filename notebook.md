@@ -1,6 +1,6 @@
-# What are Embeddings?
+## What are Embeddings?
 
-## Creating embeddings
+### Creating embeddings
 
 In this exercise, you'll create your very first embeddings using the
 OpenAI API. To interact with the API, you'll need your OpenAI API key.
@@ -46,7 +46,7 @@ response_dict = response.model_dump()
 print(response_dict)
 ```
 
-## Digging into the embeddings response
+### Digging into the embeddings response
 
 You've been able to successfully use the OpenAI Embeddings endpoint to
 embed text data, and in this exercise, you'll finish this off by
@@ -79,7 +79,7 @@ print(response_dict['usage']['total_tokens'])
 print(response_dict['data'][0]['embedding'])
 ```
 
-## Embedding product descriptions
+### Embedding product descriptions
 
 You've been provided with a list of dictionaries called `products`,
 which contains product information for different products sold by an
@@ -140,7 +140,7 @@ for i, product in enumerate(products):
 print(products[0].items())
 ```
 
-## Visualizing the embedded descriptions
+### Visualizing the embedded descriptions
 
 Now that you've created embeddings from the product descriptions, it's
 time to explore them! You'll use
@@ -215,7 +215,7 @@ for i, category in enumerate(categories):
 plt.show()
 ```
 
-## More repeatable embeddings
+### More repeatable embeddings
 
 As you continue to work with embeddings, you'll find yourself making
 repeated calls to OpenAI's embedding model. To make these calls in a
@@ -256,7 +256,7 @@ print(create_embeddings(short_description)[0])
 print(create_embeddings(list_of_descriptions))
 ```
 
-## Finding the most similar product
+### Finding the most similar product
 
 Being able to compute similarity between embeddings is a key step within
 embeddings applications. In this exercise, you'll return to the
@@ -302,9 +302,9 @@ min_dist_ind = np.argmin(distances)
 print(products[min_dist_ind]['short_description'])
 ```
 
-# Embeddings for AI Applications
+## Embeddings for AI Applications
 
-## Enriching embeddings
+### Enriching embeddings
 
 Previously, when you embedded product information, you were limited to
 only embedding the product `'short_description'`, which captured some,
@@ -372,7 +372,7 @@ product_texts = [create_product_text(product) for product in products]
 product_embeddings = create_embeddings(product_texts)
 ```
 
-## Sorting by similarity
+### Sorting by similarity
 
 Now that you've embedded all of your features, the next step is to
 compute the similarities. In this exercise, you'll define a function
@@ -410,7 +410,7 @@ def find_n_closest(query_vector, embeddings, n=3):
   return distances_sorted[0:n]
 ```
 
-## Semantic search for products
+### Semantic search for products
 
 Time to put your `find_n_closest()` function to use! You'll test out
 your semantic product search on a test query, computing a sorted list of
@@ -464,7 +464,7 @@ for hit in hits:
   print(product["title"])
 ```
 
-## Product recommendation system
+### Product recommendation system
 
 In this exercise, you'll make a recommendation system for an online
 retailer that sells a variety of products. This system recommends three
@@ -538,7 +538,7 @@ for hit in hits:
   print(product['title'])
 ```
 
-## Adding user history to the recommendation engine
+### Adding user history to the recommendation engine
 
 For many recommendation cases, such as film or purchase recommendation,
 basing the next recommendation on one data point will be insufficient.
@@ -590,7 +590,7 @@ for hit in hits:
   print(product['title'])
 ```
 
-## Embedding restaurant reviews
+### Embedding restaurant reviews
 
 One common classification task that embeddings are great for is
 sentiment analysis. In this and the following exercises, you'll navigate
@@ -637,7 +637,7 @@ class_embeddings = create_embeddings(class_descriptions)
 review_embeddings = create_embeddings(reviews)
 ```
 
-## Classifying review sentiment
+### Classifying review sentiment
 
 Now that you've calculated the embeddings, it's time to compute the
 cosine distances and extract the most similar label.
@@ -681,7 +681,7 @@ for index, review in enumerate(reviews):
   print(f'"{review}" was classified as {label}')
 ```
 
-## Embedding more detailed descriptions
+### Embedding more detailed descriptions
 
 One of the last predicted labels didn't seem representative of the
 review; this was probably down to the lack of information being captured
@@ -733,9 +733,9 @@ for index, review in enumerate(reviews):
   print(f'"{review}" was classified as {label}')
 ```
 
-# Vector Databases
+## Vector Databases
 
-## Getting started with ChromaDB
+### Getting started with ChromaDB
 
 In the following exercises, you'll use a vector database to embed and
 query 1000 films and TV shows from the Netflix dataset introduced in the
@@ -789,7 +789,7 @@ collection = client.create_collection(
 print(client.list_collections())
 ```
 
-## Estimating embedding costs with tiktoken
+### Estimating embedding costs with tiktoken
 
 Now that we've created a database and collection to store the Netflix
 films and TV shows, we can begin embedding data.
@@ -829,7 +829,7 @@ print('Total tokens:', total_tokens)
 print('Cost:', cost_per_1k_tokens * total_tokens/1000)
 ```
 
-## Adding data to the collection
+### Adding data to the collection
 
 Time to add those Netflix films and TV shows to your collection! You've
 been provided with a list of document IDs and texts, stored in `ids` and
@@ -885,7 +885,7 @@ print(f"No. of documents: {collection.count()}")
 print(f"First ten documents: {collection.peek()}")
 ```
 
-## Querying the Netflix collection
+### Querying the Netflix collection
 
 Now that you've created and populated the `netflix_titles` collection,
 it's time to query it!
@@ -922,7 +922,7 @@ result = collection.query(
 print(result)
 ```
 
-## Updating and deleting items from a collection
+### Updating and deleting items from a collection
 
 Just because the documents have been stored away in a vector database,
 that doesn't mean that you can't make changes to add to the collection
@@ -972,7 +972,7 @@ result = collection.query(
 print(result)
 ```
 
-## Querying with multiple texts
+### Querying with multiple texts
 
 In many cases, you'll want to query the vector database using multiple
 query texts. Recall that these query texts are embedded using the same
@@ -1016,7 +1016,7 @@ result = collection.query(
 print(result['documents'])
 ```
 
-## Filtering using metadata
+### Filtering using metadata
 
 Having metadata available to use in the database can unlock the ability
 to more easily filter results based on additional conditions. Imagine
