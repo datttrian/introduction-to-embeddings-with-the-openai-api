@@ -1,3 +1,5 @@
+# Introduction to Embeddings with the OpenAI API
+
 ## What are Embeddings?
 
 ### Creating embeddings
