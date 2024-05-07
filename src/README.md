@@ -6,14 +6,14 @@
 - [Digging into the embeddings response](digging_into_the_embeddings_response.py)
 - [Embedding product descriptions](embedding_product_descriptions.py)
 - [Visualizing the embedded descriptions](visualizing_the_embedded_descriptions.py)
-- [More repeatable embeddings](python more_repeatable_embeddings.py)
+- [More repeatable embeddings](more_repeatable_embeddings.py)
 - [Finding the most similar product](finding_the_most_similar_product.py)
 
 ## Embeddings for AI Applications
 
-- Enriching embeddings
-- Sorting by similarity
-- Semantic search for products
+- [Enriching embeddings](enriching_embeddings.py)
+- [Sorting by similarity](sorting_by_similarity.py)
+- [Semantic search for products](semantic_search_for_products.py )
 - Product recommendation system
 - Adding user history to the recommendation engine
 - Embedding restaurant reviews
