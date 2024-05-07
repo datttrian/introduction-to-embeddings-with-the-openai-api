@@ -1,6 +1,6 @@
 import csv
-import tiktoken
 
+import tiktoken
 
 ids = []
 documents = []
