@@ -16,9 +16,9 @@
 - [Semantic search for products](semantic_search_for_products.py )
 - [Product recommendation system](product_recommendation_system.py )
 - [Adding user history to the recommendation engine](adding_data_to_the_collection.py)
-- Embedding restaurant reviews
-- Classifying review sentiment
-- Embedding more detailed descriptions
+- [Embedding restaurant reviews](embedding_restaurant_reviews.py)
+- [Classifying review sentiment](classifying_review_sentiment.py)
+- [Embedding more detailed descriptions](embedding_more_detailed_descriptions.py)
 
 
 ## Vector Databases
