@@ -38,6 +38,22 @@ products = [
     { "title": "Luxury Skincare Set", "short_description": "Elevate your skincare routine with this luxurious skincare set.", "price": 179.99, "category": "Beauty", "features": [ "Premium anti-aging ingredients", "Hydrating and rejuvenating formulas", "Complete skincare regimen", "Elegant packaging", ], },
 ]
 
+# Extract a list of product short descriptions from products
+product_descriptions = [product['short_description'] for product in products]
+
+# Create embeddings for each product description
+response = client.embeddings.create(
+  model="text-embedding-ada-002",
+  input=product_descriptions
+)
+response_dict = response.model_dump()
+
+# Extract the embeddings from response_dict and store in products
+for i, product in enumerate(products):
+    product['embedding'] = response_dict['data'][i]['embedding']
+    
+print(products[0].items())
+
 
 # Define a create_embeddings function
 def create_embeddings(texts):
