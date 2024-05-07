@@ -3,10 +3,10 @@
 ## What are Embeddings?
 
 - [Creating embeddings](creating_embeddings.py)
-- Digging into the embeddings response
-- Embedding product descriptions
-- Visualizing the embedded descriptions
-- More repeatable embeddings
+- [Digging into the embeddings response](digging_into_the_embeddings_response.py)
+- [Embedding product descriptions](embedding_product_descriptions.py)
+- [Visualizing the embedded descriptions](visualizing_the_embedded_descriptions.py)
+- [More repeatable embeddings](python more_repeatable_embeddings.py )
 - Finding the most similar product
 
 ## Embeddings for AI Applications
