@@ -2,7 +2,7 @@
 
 ## What are Embeddings?
 
-- Creating embeddings
+- [Creating embeddings](creating_embeddings.py)
 - Digging into the embeddings response
 - Embedding product descriptions
 - Visualizing the embedded descriptions
