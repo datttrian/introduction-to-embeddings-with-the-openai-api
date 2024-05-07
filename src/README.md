@@ -15,7 +15,7 @@
 - [Sorting by similarity](sorting_by_similarity.py)
 - [Semantic search for products](semantic_search_for_products.py )
 - [Product recommendation system](product_recommendation_system.py )
-- [Adding user history to the recommendation engine](adding_data_to_the_collection.py)
+- [Adding user history to the recommendation engine](adding_user_history_to_the_recommendation_engine.py)
 - [Embedding restaurant reviews](embedding_restaurant_reviews.py)
 - [Classifying review sentiment](classifying_review_sentiment.py)
 - [Embedding more detailed descriptions](embedding_more_detailed_descriptions.py)
@@ -23,9 +23,9 @@
 
 ## Vector Databases
 
-- Getting started with ChromaDB
-- Estimating embedding costs with tiktoken
-- Adding data to the collection
+- [Getting started with ChromaDB](getting_started_with_chromadb.py)
+- [Estimating embedding costs with tiktoken](estimating_embedding_costs_with_tiktoken.py)
+- [Adding data to the collection](adding_data_to_the_collection.py)
 - Querying the Netflix collection
 - Updating and deleting items from a collection
 - Querying with multiple texts
