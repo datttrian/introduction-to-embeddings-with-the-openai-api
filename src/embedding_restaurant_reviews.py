@@ -1,11 +1,9 @@
 # added/edited
 import os
 
-import numpy as np
 import openai
 from dotenv import load_dotenv
 from openai import OpenAI
-from scipy.spatial import distance  # type: ignore
 
 load_dotenv()
 openai.api_key = os.environ["OPENAI_API_KEY"]
@@ -19,6 +17,7 @@ def create_embeddings(texts):
     response_dict = response.model_dump()
 
     return [data["embedding"] for data in response_dict["data"]]
+
 
 # added/edited
 sentiments = [{"label": "Positive"}, {"label": "Neutral"}, {"label": "Negative"}]

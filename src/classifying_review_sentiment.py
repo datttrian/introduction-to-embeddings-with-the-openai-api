@@ -1,7 +1,6 @@
 # added/edited
 import os
 
-import numpy as np
 import openai
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -19,6 +18,7 @@ def create_embeddings(texts):
     response_dict = response.model_dump()
 
     return [data["embedding"] for data in response_dict["data"]]
+
 
 # added/edited
 sentiments = [{"label": "Positive"}, {"label": "Neutral"}, {"label": "Negative"}]

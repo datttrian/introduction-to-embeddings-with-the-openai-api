@@ -1,13 +1,9 @@
 # added/edited
 import os
 
-import numpy as np
 import openai
 from dotenv import load_dotenv
-from matplotlib import pyplot as plt
 from openai import OpenAI
-from scipy.spatial import distance  # type: ignore
-from sklearn.manifold import TSNE  # type: ignore
 
 load_dotenv()
 openai.api_key = os.environ["OPENAI_API_KEY"]
