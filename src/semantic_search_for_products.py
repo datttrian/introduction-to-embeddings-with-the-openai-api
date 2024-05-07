@@ -265,10 +265,6 @@ def create_embeddings(texts):
     return [data["embedding"] for data in response_dict["data"]]
 
 
-# Create the embeddings from product_texts
-product_embeddings = create_embeddings(product_texts)
-
-
 def find_n_closest(query_vector, embeddings, n=3):
     distances = []
     for index, embedding in enumerate(embeddings):
@@ -281,6 +277,9 @@ def find_n_closest(query_vector, embeddings, n=3):
     # Return the first n elements in distances_sorted
     return distances_sorted[0:n]
 
+
+# Create the embeddings from product_texts
+product_embeddings = create_embeddings(product_texts)
 
 # Create the query vector from query_text
 query_text = "computer"

@@ -32,16 +32,6 @@ reviews = [
 # Set your API key
 client = OpenAI()
 
-
-# Define a function to return the minimum distance and its index
-def find_closest(query_vector, embeddings):
-    distances = []
-    for index, embedding in enumerate(embeddings):
-        dist = distance.cosine(query_vector, embedding)
-        distances.append({"distance": dist, "index": index})
-    return min(distances, key=lambda x: x["distance"])
-
-
 # added/edited
 sentiments = [
     {"label": "Positive", "description": "A positive restaurant review"},
@@ -58,6 +48,14 @@ reviews = [
 class_descriptions = [sentiment["description"] for sentiment in sentiments]
 class_embeddings = create_embeddings(class_descriptions)
 review_embeddings = create_embeddings(reviews)
+
+
+def find_closest(query_vector, embeddings):
+    distances = []
+    for index, embedding in enumerate(embeddings):
+        dist = distance.cosine(query_vector, embedding)
+        distances.append({"distance": dist, "index": index})
+    return min(distances, key=lambda x: x["distance"])
 
 
 for index, review in enumerate(reviews):

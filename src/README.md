@@ -26,7 +26,7 @@
 - [Getting started with ChromaDB](getting_started_with_chromadb.py)
 - [Estimating embedding costs with tiktoken](estimating_embedding_costs_with_tiktoken.py)
 - [Adding data to the collection](adding_data_to_the_collection.py)
-- Querying the Netflix collection
-- Updating and deleting items from a collection
-- Querying with multiple texts
-- Filtering using metadata
+- [Querying the Netflix collection](querying_the_netflix_collection.py)
+- [Updating and deleting items from a collection](updating_and_deleting_items_from_a_collection.py)
+- [Querying with multiple texts](querying_with_multiple_texts.py)
+- [Filtering using metadata](filtering_using_metadata.py)
